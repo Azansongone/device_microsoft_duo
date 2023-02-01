@@ -26,6 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 # Installs gsi keys into ramdisk, to boot a developer GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+#Include Microsoft Vendor Blobs
+$(call inherit-product-if-exists, vendor/microsoft/duo/duo-vendor.mk)
+
 LOCAL_PATH := device/microsoft/duo
 
 # API
