@@ -1,0 +1,23 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# mount point   fstype   device                             device2                flags
+
+/metadata       ext4    /dev/block/bootdevice/by-name/metadata                     flags=display="Metadata"
+/data           ext4    /dev/block/bootdevice/by-name/userdata                     fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
+/vbmeta         emmc    /dev/block/bootdevice/by-name/vbmeta                       flags=slotselect;display="VBMeta";backup=1;flashimg=1
+/boot           emmc    /dev/block/bootdevice/by-name/boot                         flags=backup=1;flashimg=1;slotselect
+/dtbo           emmc    /dev/block/bootdevice/by-name/dtbo                         flags=backup=1;display="DTBO";flashimg=1;slotselect
+/firmware       vfat    /dev/block/bootdevice/by-name/modem                        flags=display="Firmware";slotselect;mounttodecrypt;fsflags=ro
+/persist        ext4    /dev/block/bootdevice/by-name/persist                      flags=display="Persist"
+/persist        emmc    /dev/block/bootdevice/by-name/persist                      flags=display="Persist image";backup=1;flashimg=1;
+/misc           emmc    /dev/block/bootdevice/by-name/misc                         flags=display="Misc"
+/firmware_mnt   vfat    /dev/block/bootdevice/by-name/modem                        flags=backup=1;display="Modem";slotselect
+/bt_firmware    vfat    /dev/block/bootdevice/by-name/bluetooth                    flags=backup=1;subpartitionof=/modem;slotselect
+/dsp            etx4    /dev/block/bootdevice/by-name/dsp                          flags=backup=1;subpartitionof=/modem;slotselect
+/sftpfw         vfat    /dev/block/bootdevice/by-name/sftpfw                       flags=backup=1;subpartitionof=/vendor;slotselect
+/sfpd           vfat    /dev/block/bootdevice/by-name/sfpd                         flags=backup=1;subpartitionof=/vendor;slotselect
+
+# Removable storage
+/usbotg         vfat    /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*      flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
