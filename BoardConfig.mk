@@ -81,7 +81,7 @@ BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000
 
 NEED_KERNEL_MODULE_RECOVERY := true
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilt/dtb/dtb.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb/dtb.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 # Metadata
