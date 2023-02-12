@@ -109,7 +109,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_BOARD_PLATFORM := surfaceduo
+TARGET_BOARD_PLATFORM := msmnile
 
 # Properties
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
