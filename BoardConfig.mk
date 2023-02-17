@@ -59,6 +59,9 @@ TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_CONFIG := vendor/surfaceduo_defconfig
 TARGET_KERNEL_SOURCE := kernel/msm-4.14
 
+#Kernel Toolchain (This includes microsoft's )
+-include $(ROOT_DIR)/kernel/msm-4.14/build.config.perf-config
+
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
