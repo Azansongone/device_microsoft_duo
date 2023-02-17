@@ -56,7 +56,7 @@ TARGET_KERNEL_ARCH := $(TARGET_ARCH)
 TARGET_KERNEL_HEADER_ARCH := $(TARGET_ARCH)
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch-linux-android-
 TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := arm-linux-androideabi-
-TARGET_KERNEL_CONFIG := vendor/surfaceduo_defconfig
+TARGET_KERNEL_CONFIG := vendor/surfaceduo-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/msm-4.14
 
 #Kernel Toolchain (This includes microsoft's )
