@@ -53,10 +53,3 @@ PRODUCT_NAME := twrp_duo
 PRODUCT_BRAND := Microsoft
 PRODUCT_MODEL := Surface Duo
 PRODUCT_MANUFACTURER := Microsoft
-
-PRODUCT_GMS_CLIENTID_BASE := android-microsoft
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="duo-user duo 2022.821.13 202208210013 release-keys"
-
-BUILD_FINGERPRINT := surface/duo/duo:12/2022.821.13/202208210013:user/release-keys
